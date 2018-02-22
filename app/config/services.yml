@@ -1,0 +1,13 @@
+parameters:
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+
+
+    AppBundle\Controller\:
+        resource: '../../src/AppBundle/Controller/'
+        autowire: true
+        tags: ['controller.service_arguments']

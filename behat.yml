@@ -1,0 +1,20 @@
+default:
+    suites:
+        default:
+            contexts:
+                - Behat\MinkExtension\Context\MinkContext
+                - Behatch\Context\RestContext
+                - Behatch\Context\JsonContext
+                - ApiContext
+                - AuthContext:
+                      userManager: '@fos_user.user_manager'
+                      entityManager: '@doctrine.orm.default_entity_manager'
+
+
+    extensions:
+          Behat\MinkExtension:
+              base_url: 'http://localhost:8000'
+              goutte: ~
+
+          Behatch\Extension: ~
+          Behat\Symfony2Extension: ~

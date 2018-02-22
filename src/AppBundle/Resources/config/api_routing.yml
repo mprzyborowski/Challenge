@@ -1,0 +1,12 @@
+login:
+    type: rest
+    resource: "@AppBundle/Controller/Auth/RestLoginController.php"
+
+refresh_token:
+    path:     /api/token/refresh
+    defaults: { _controller: gesdinet.jwtrefreshtoken:refresh }
+
+user:
+    type: rest
+    resource: "@AppBundle/Controller/Api/UserController.php"
+
